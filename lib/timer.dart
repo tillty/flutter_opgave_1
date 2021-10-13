@@ -59,14 +59,14 @@ class _TimerState extends State<Timer> {
   }
 
   void _initializeTimer() {
-    Future.delayed(widget.updateTimerInterval, _handleUpdateNumberOfTicks);
+    Future.delayed(widget.updateTimerInterval, _updateAndReinitializeTimer);
   }
 
-  void _handleUpdateNumberOfTicks() {
-    _initializeTimer();
+  void _updateAndReinitializeTimer() {
     setState(() {
       duration = DateTime.now().difference(startTime);
     });
+    _initializeTimer();
   }
 
   bool _isBetweenZeroAndTenMinutes() => duration.inMinutes > 0 && duration.inMinutes < 10;

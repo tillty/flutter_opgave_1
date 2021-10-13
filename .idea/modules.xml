@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/opgave_fork.iml" filepath="$PROJECT_DIR$/.idea/opgave_fork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/opgave.iml" filepath="$PROJECT_DIR$/opgave.iml" />
     </modules>
   </component>
 </project>
