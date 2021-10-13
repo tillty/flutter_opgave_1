@@ -33,7 +33,7 @@ class TestApp extends StatelessWidget {
                     padding: const EdgeInsets.all(5),
                     child: Timer(
                       key: Key(index.toString()),
-                      timeBetweenRerender: Duration(seconds: index + 1),
+                      updateTimerInterval: Duration(seconds: index + 1),
                     ),
                   ),
                 )),

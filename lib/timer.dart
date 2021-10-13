@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Timer extends StatefulWidget {
-  final Duration timeBetweenRerender;
+  final Duration updateTimerInterval;
 
-  const Timer({Key? key, required this.timeBetweenRerender}) : super(key: key);
+  const Timer({Key? key, required this.updateTimerInterval}) : super(key: key);
 
   @override
   _TimerState createState() => _TimerState();
@@ -59,7 +59,7 @@ class _TimerState extends State<Timer> {
   }
 
   void _initializeTimer() {
-    Future.delayed(widget.timeBetweenRerender, _handleUpdateNumberOfTicks);
+    Future.delayed(widget.updateTimerInterval, _handleUpdateNumberOfTicks);
   }
 
   void _handleUpdateNumberOfTicks() {
